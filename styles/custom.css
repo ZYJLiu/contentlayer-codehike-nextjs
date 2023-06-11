@@ -1,7 +1,11 @@
 body {
   --ch-scrollycoding-sticker-width: 600px;
-  --ch-scrollycoding-code-min-height: 62vh;
+  /* --ch-scrollycoding-code-min-height: 80vh; */
 }
+
+/* .ch-spotlight-sticker {
+  width: 600px !important;
+} */
 
 .ch-scrollycoding {
   gap: 0;
@@ -21,9 +25,9 @@ body {
   background-color: rgb(247, 250, 252) !important;
 }
 
-/* .ch-scrollycoding-step-content:first-child,
+.ch-scrollycoding-step-content:first-child,
 .ch-scrollycoding-step-content:last-child {
   background-color: unset !important;
   border-color: transparent !important;
   box-shadow: none;
-} */
+}
