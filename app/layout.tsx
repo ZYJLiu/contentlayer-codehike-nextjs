@@ -1,8 +1,13 @@
-import '../styles/globals.css'
+import { Header } from "../components/Header"
+import "../styles/globals.css"
+import "../styles/custom.css"
+import "@code-hike/mdx/dist/index.css"
 
-import { Header } from '../components/Header'
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html>
       <head>

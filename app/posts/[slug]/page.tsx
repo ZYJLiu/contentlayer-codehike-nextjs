@@ -1,10 +1,12 @@
-import { format, parseISO } from 'date-fns'
-import { allPosts } from 'contentlayer/generated'
-import { getMDXComponent } from 'next-contentlayer/hooks'
+"use client"
+import { format, parseISO } from "date-fns"
+import { allPosts } from "contentlayer/generated"
+import { getMDXComponent } from "next-contentlayer/hooks"
 
-export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
+export const generateStaticParams = async () =>
+  allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
-export const generateMetadata = ({ params }) => {
+const generateMetadata = ({ params }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
   return { title: post.title }
 }
@@ -15,10 +17,10 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const Content = getMDXComponent(post.body.code)
 
   return (
-    <article className="py-8 mx-auto max-w-xl">
+    <article className="py-8 mx-auto max-w-6xl">
       <div className="mb-8 text-center">
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
+          {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
         <h1>{post.title}</h1>
       </div>
