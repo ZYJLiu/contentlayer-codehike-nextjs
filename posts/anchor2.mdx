@@ -1,13 +1,13 @@
 ---
-title: Anchor Scrollycoding
+title: Anchor Spotlight
 date: 2023-06-10
 ---
 
-# Scrollycoding
+# Spotlight
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
 
-<CH.Scrollycoding>
+<CH.Spotlight>
 
 <CH.Code>
 
@@ -21,9 +21,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </CH.Code>
 
+---
+
 ## Anchor
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+
+```rust lib.rs
+// from ../files/lib.rs
+```
 
 ---
 
@@ -33,17 +39,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 // from ../files/1.rs
 ```
 
-[declare_id!](focus://3)
+<CH.Section>
 
-[#[program]](focus://5:7)
+```rust lib.rs
+// from ../files/1.rs
+```
 
-[#[account]](focus://10:13)
+[declare_id!](focus://3) macro
+
+[#[program]](focus://5:7) macro
+
+[#[account]](focus://10:13) macro
+
+</CH.Section>
+
+{/* [test](focus://1[5:16],3[9:16],7) */}
 
 ---
 
 ## 2
 
-```rust lib.rs
+```rust lib.rs linesOfHeight=focus
 // from ../files/2.rs
 ```
 
@@ -71,29 +87,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <CH.Code>
 
-```rust lib.rs focus=9:15
+```rust lib.rs
 // from ../files/lib.rs
 ```
 
 ---
 
-```js test.ts focus=21
+```js test.ts
 // from ../files/test.ts
 ```
 
 </CH.Code>
 
-[test](focus://9[28:49])
-
----
-
-## 0
-
-```rust lib.rs focus=5:7 mark=5:7
-
-```
-
-</CH.Scrollycoding>
+</CH.Spotlight>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
 
