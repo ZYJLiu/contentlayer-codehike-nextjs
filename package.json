@@ -3,18 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "contentlayer dev & next dev",
+    "build": "contentlayer build & next build",
     "start": "next start"
   },
   "dependencies": {
     "@code-hike/mdx": "^0.8.3",
-    "contentlayer": "latest",
+    "contentlayer": "0.3.1",
     "date-fns": "2.30.0",
     "next": "13.4.4",
-    "next-contentlayer": "latest",
+    "next-contentlayer": "0.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "overrides": {
+    "@opentelemetry/api": "1.4.1",
+    "@opentelemetry/core": "1.13.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+    "@opentelemetry/resources": "1.13.0",
+    "@opentelemetry/sdk-trace-base": "1.13.0",
+    "@opentelemetry/sdk-trace-node": "1.13.0",
+    "@opentelemetry/semantic-conventions": "1.13.0"
   },
   "devDependencies": {
     "@types/react": "18.2.7",
